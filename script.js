@@ -33,7 +33,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/*
 //Selecting elements
 console.log(document.documentElement);
 console.log(document.head);
@@ -49,7 +49,7 @@ const allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
 
 console.log(document.getElementsByClassName('btn'));
-/*
+
 // Selecting, Creating, and Deleting Elements
 // .insertAdjacentHTML
 
@@ -126,7 +126,7 @@ logo.classList.contains('c'); // not includes
 
 // Don't use
 logo.className = 'Jonas';
-*/
+
 
 // Implementing Smooth Scrolling
 
@@ -162,3 +162,18 @@ btnScrollTo.addEventListener('click', function (e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+*/
+
+const h1 = document.querySelector('h1');
+
+const alertH1 = function (e) {
+  alert('addEventListener: Great! You are readiing the heading :D');
+};
+
+h1.addEventListener('mouseenter', alertH1);
+
+setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+
+// h1.onmouseenter = function (e) {
+//   alert('addEventListener: Great! You are readiing the heading :D');
+// };
